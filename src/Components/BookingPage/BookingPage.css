@@ -1,0 +1,58 @@
+.bookingPage__banner {
+  height: 56vh;
+  background: url("https://holrmagazine.com/wp-content/uploads/2020/09/Sheep-grazing-South-Island-New-Zealand.jpg")
+    center center;
+}
+
+.bookingPage__info {
+  background-color: #202020;
+  color: #ff7779;
+  padding-top: 20vh;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 38px;
+  width: 300px;
+  text-transform: capitalize;
+  text-decoration: solid;
+  text-shadow: #202020;
+}
+
+.bookingPage1__info {
+  padding: 20px;
+}
+
+.bookingPage1__info > p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.bookingPage1__info > h1 {
+  margin-bottom: 30px;
+}
+.bookingPage1__info > h2 {
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.bookingPage1__info > button {
+  background-color: #ff7779;
+  color: #202020;
+  border-radius: 30px;
+  text-transform: inherit;
+  margin: 5px;
+}
+
+.bookingPage__content {
+  padding: 20px;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  justify-self: center;
+  width: max-content;
+}
+
+.bookingPage__image {
+  height: 200px;
+  width: 200px;
+  align-self: center;
+}

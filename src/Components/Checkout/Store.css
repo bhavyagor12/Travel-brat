@@ -1,0 +1,44 @@
+.store {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  max-height: 400px;
+  min-width: 100px;
+  margin: 10px;
+  padding: 20px;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+}
+
+.store__info {
+  height: 100px;
+  margin-bottom: 15px;
+}
+.store__price {
+  margin-top: 5px;
+}
+.store__rating {
+  display: flex;
+}
+.store > img {
+  max-height: 200px;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.store > button {
+  cursor: pointer;
+  background-color: #ff7779;
+  color: white;
+  border: 1px solid;
+  border: black;
+}
+
+.store > button:hover {
+  background-color: white;
+  color: #ff7779;
+  border: white;
+}

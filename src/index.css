@@ -1,7 +1,21 @@
 .login {
-  background: url("G:\study\sem6\TravelBrat\travel-brat\src\Images\img-home.jpg")
-    no-repeat;
+  background: url("https://i.pinimg.com/originals/70/22/51/702251abed80340d3f4b7b9e99de9702.jpg")
+    center no-repeat;
   background-size: cover;
   min-width: 100%;
   min-height: 100%;
+}
+body {
+  background-color: rgb(234, 237, 237);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }

@@ -35,11 +35,11 @@
 .searchDate > button {
   position: absolute;
   left: 0;
-  top: 480px;
+  top: 470px;
   text-transform: inherit !important;
   background-color: #ff7779;
   color: white;
-  width: 579px;
+  width: 539px;
 }
 .searchDate > button:hover {
   background-color: white;

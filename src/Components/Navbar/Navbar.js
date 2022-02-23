@@ -1,19 +1,27 @@
 // eslint-disable-next-line 
-import { SearchOutlined } from '@material-ui/icons';
+
 import React, { useState, useEffect, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../Images/Logo.jpg';
-import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
+import Logo from '../../Images/Logo.jpg';
+import {useStateValue} from "../Functions/StateProvider";
+import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import './Navbar.css';
+import {auth} from "../Functions/firebase";
 
 function Navbar() {
 
-
-
-
+    const [{basket,user} ] = useStateValue();
+  
+    const login =() =>{
+      if(user){
+        auth.signOut();
+      }
+    }
+ 
+    
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
-
+    
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
      
@@ -32,24 +40,11 @@ function Navbar() {
     window.addEventListener('resize', showButton);
 
     
-        const [colorChange, setColorchange] = useState(false);
-        
-        const changeNavbarColor = () =>{
-           if(window.scrollY >= 80){
-             setColorchange(true);
-           }
-           else{
-             setColorchange(false);
-           }
-        };
-        useEffect(() => {
-            changeNavbarColor();
-          }, []);
     
 
     return(
         <Fragment>
-        <div className={colorChange ? 'navbar__colorChange' : 'navbar'}>
+        <div className= "navbar">
             <div className="navbar-container">
                 
                 <div className="navbar__left">
@@ -60,22 +55,13 @@ function Navbar() {
                     <i className={click ? 'fas fa-times': 'fas fa-bars'}/>
                 </div>
                 </div>
-            <div className="navbar__center">
-                <input type="text"/>
-                <SearchOutlined/>
             
-            </div>
             </div>
             <div className="navbar__right">
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                 <li className='nav-item'>
-                    <Link to='/home' className='nav-links' onClick={closeMobileMenu}>
-                        Home
-                    </Link>
-                </li>
-                <li className='nav-item'>
-                    <Link to='/services' className='nav-links' onClick={closeMobileMenu}>
-                        Services
+                    <Link to='/search' className='nav-links' onClick={closeMobileMenu}>
+                        Explore Locations
                     </Link>
                 </li>
                 <li className='nav-item'>
@@ -84,10 +70,23 @@ function Navbar() {
                     </Link>
                 </li>
                 <li className='nav-item'>
-                    <Link to='/sign-up' className='nav-links' onClick={closeMobileMenu}>
-                        Sign Up
+                    <Link to='/checkout' className='nav-links' onClick={closeMobileMenu}>
+                    <div className="header__optionBasket">
+                    Cart <ShoppingBasketIcon/>
+                    <span className="header__optionlineTwo" className="header__basketCount">{basket?.length}</span>
+                    </div>
                     </Link>
                 </li>
+
+                <li className='nav-item'>
+                    <Link to={!user && "/signup"} className='nav-links'  onClick={closeMobileMenu}>
+                    <div onClick={login} className="header__option">
+                    Sign in/Sign Up
+                 </div>
+                    </Link>
+                </li>
+
+
             </ul>
             </div>
             

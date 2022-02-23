@@ -1,0 +1,19 @@
+.home__card {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0%;
+}
+
+.home__section {
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+}
+
+.home__title > h2 {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}

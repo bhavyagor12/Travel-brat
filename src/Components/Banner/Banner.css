@@ -1,5 +1,5 @@
 .banner {
-  height: 60vh;
+  height: 63vh;
   position: relative;
   background: url("G:\study\sem6\TravelBrat\travel-brat\src\Images\img-8.jpg")
     center center;
@@ -11,7 +11,7 @@
   padding-top: 15vh;
   padding-left: 40px;
   padding-right: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 38px;
   width: 300px;
 }
 
@@ -31,7 +31,6 @@
 }
 .banner__search {
   display: flex;
-
   flex-direction: column;
 }
 
